@@ -1,0 +1,280 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #ffffff;
+    
+}
+
+.login-btn {
+    padding: 8px 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-left h3 {
+    margin-top: 0;
+}
+
+.footer-left p, .footer-left a {
+    color: #fff;
+    text-decoration: none;
+    margin: 4px 0;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    vertical-align: middle;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 320px;
+}
+
+.contact-form label {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+.contact-form textarea,
+.contact-form input[type="email"] {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border-radius: 4px;
+    border: none;
+    resize: vertical;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 8px 18px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.back-btn {
+    margin-bottom: 16px;
+    padding: 6px 14px;
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.center-message {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-message h2 {
+    font-size: 2.5rem;
+    color: #35424a;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.documents-section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 32px;
+    margin: 40px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+.documents-section h2 {
+    margin-top: 0;
+}
+
+.upload-btn {
+    margin-top: 20px;
+    padding: 8px 18px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#documentsList {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+#documentsList li {
+    background: #f4f4f4;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+/* ...existing code... */
+.login-main-center {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: #01254d;
+    color: #fff;
+    padding: 32px 32px 24px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box label {
+    align-self: flex-start;
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 220px;
+    padding: 7px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: none;
+}
+
+.login-box button[type="submit"] {
+    margin-top: 10px;
+    padding: 8px 18px;
+    background: #fff;
+    color: #001831;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#loginMessage {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.bg-image {
+    background: url('bg.png') center center/cover no-repeat;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.bg-image h2 {
+    background: rgba(255,255,255,0.85);
+    padding: 32px 48px;
+    border-radius: 12px;
+    font-size: 2.5rem;
+    color: #35424a;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.login-body{
+    background-image: url("bg.png");
+}
+
+
