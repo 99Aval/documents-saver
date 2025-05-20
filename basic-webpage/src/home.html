@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Documents</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    <header>
+        <h1>Your Saved Documents</h1>
+        <button id="logoutBtn" class="login-btn">Logout</button>
+    </header>
+    <main>
+        <div class="documents-section">
+            <h2>Documents</h2>
+            <ul id="documentsList">
+                <!-- List of documents will appear here -->
+            </ul>
+            <button id="uploadBtn" class="upload-btn">Upload Document</button>
+            <form id="uploadForm" style="display:none; margin-top:16px;">
+                <input type="file" id="documentFile" required>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        const documents = [
+            "Resume.pdf",
+            "Project.docx",
+            "Notes.txt"
+        ];
+        const documentsList = document.getElementById('documentsList');
+        documents.forEach(doc => {
+            const li = document.createElement('li');
+            li.textContent = doc;
+            documentsList.appendChild(li);
+        });
+
+        document.getElementById('uploadBtn').onclick = function() {
+            document.getElementById('uploadForm').style.display = 'block';
+        };
+
+        document.getElementById('uploadForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert('Document uploaded (demo only)');
+            document.getElementById('uploadForm').reset();
+            document.getElementById('uploadForm').style.display = 'none';
+        };
+
+        document.getElementById('logoutBtn').onclick = function() {
+            window.location.href = 'index.html';
+        };
+    </script>
+
+</body>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>Contact Us</h3>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p><strong>Email:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+                <div class="social-icons">
+                    <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/twitter.svg" alt="Twitter" />
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/instagram.svg" alt="Instagram" />
+                    </a>
+                    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/facebook.svg" alt="Facebook" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <form class="contact-form">
+                    <label for="feedback">Feedback / Problems:</label>
+                    <textarea id="feedback" name="feedback" rows="3" required></textarea>
+                    <label for="userEmail">Your Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+</html>
